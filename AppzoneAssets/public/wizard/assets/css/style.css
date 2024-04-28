@@ -1,0 +1,655 @@
+ @import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&amp;display=swap');
+
+
+
+
+/*universal*/
+h1,h2,h3,h4,h5,h6
+{
+	  font-family: "Jost";
+	  margin: 0;
+}
+
+
+/*input/select fiels style*/
+.form_input, .form_select
+{
+	background-color: rgb(255, 255, 255);
+	width: 100%;
+	height: 65px;
+	line-height: 65px;
+	padding-left: 30px;
+	animation: entrance 0.5s linear 1;
+	margin-bottom: 20px;
+	border: none;
+	border-radius: 35px;
+	transition: 0.1s ease;
+  font-size: 16px;
+  font-family: "Roboto";
+  color: rgb(189, 189, 189);
+  position: relative;
+}
+
+.form_input:focus, .form_select:focus
+{
+	outline: solid 2px rgb(29, 102, 255);
+	border: none !important;
+	box-shadow: 0px 5px 35px 0px rgba(107, 89, 211, 0.17);
+}
+
+
+/*select field style*/
+.form_select
+{
+	-webkit-appearance: none;
+	background-image: url(../images/dropdown.png);
+	background-position: calc(100% - 20px) center;
+	background-size: 10px;
+	cursor: pointer;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.form_select option
+{
+	list-style: none;
+	appearance: none;
+	font-size: 16px;
+  font-family: "Roboto";
+  color: rgb(0,0,0);
+  cursor: pointer;
+}
+/*
+select::after
+{
+	position: absolute;
+	content: "\f063";
+	font-family: FontAwesome;
+}*/
+
+
+/*form labels style*/
+.label-text
+{
+  font-size: 18px;
+  font-family: "Jost";
+  margin-bottom: 5px;
+  font-weight: 500;
+  padding-left: 30px;
+  color: rgb(47, 49, 70);
+}
+
+/*form main heading style*/
+.main-heading
+{
+  font-size: 40px;
+  color: rgb(5, 17, 51);
+  text-align: center;
+  font-family: "jost";
+  text-transform: capitalize;
+  font-weight: bold;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+p
+{
+	font-family: "Roboto";
+	margin: 0;
+}
+
+
+/*step 1*/
+.step1
+{
+	background: #fff;
+	padding: 20px;
+}
+.step1-inner
+{
+
+  border-radius: 90px;
+  background-color: rgb(243, 247, 254);
+  height: auto;
+  position: relative;
+  z-index: 0;
+}
+.wrapper
+{
+	  padding: 50px 0;
+}
+
+
+.company
+{
+	display: flex;
+	align-items: center;
+}
+
+/*logo*/
+.company .company_logo
+{
+	width: 65px;
+	height: 65px;
+	border-radius: 50%;
+	background: rgb(255, 255, 255);
+	text-align: center;
+	line-height: 65px;
+}
+.company_logo img
+{
+	width: 65%;
+	height: 75%;
+}
+
+/*name*/
+.company .company-name
+{
+	margin-left: 10px;
+}
+.company .company-name h4
+{
+
+  font-size: 20px;
+  color: rgb(47, 49, 70);
+  font-weight: bold;
+
+}
+.company .company-name p
+{
+
+  font-size: 16px;
+  color: rgb(171, 171, 171);
+}
+
+
+/*tab buttons*/
+.form_tabs
+{
+  border-radius: 35px;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 66px;
+  padding: 5px 10px;
+}
+.form_tabs button
+{
+
+  background-color: rgb(233, 240, 251);
+  border-radius: 35px !important;
+  width: 50%;
+  height: 56px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.5s all ease;
+  text-transform: capitalize;
+  font-family: "Jost";
+  color: rgb(47, 49, 70) !important;
+  border: solid 2px transparent !important;
+
+
+}
+.form_tabs button:hover
+{
+	border: none;
+}
+
+.nav-tabs
+{
+	border-bottom: none;
+}
+
+.form_tabs .nav-link.active
+{
+	  background-color: rgb(233, 240, 251);
+}
+
+
+/*multi select field style*/
+.multi-select
+{
+	
+	position: relative;
+}
+.multi-select select:focus
+{
+	outline: 0 !important;
+}
+.multi-select-inner
+{
+	border-radius: 35px;
+	background-color: rgb(255, 255, 255);
+	height: 67px;
+	animation: entrance 1s ease forwards;
+	position: absolute;
+	top: 32px;
+	z-index: -1;
+	overflow: hidden;
+	width: 100%;
+}
+.multi-select-inner::after
+{
+	position: absolute;
+	content: "";
+	display: block;
+	background-color: rgb(231, 231, 231);
+	height: 40px;
+	width: 2px;
+	top: 10px;
+	overflow: hidden;
+	left: 50%;
+  
+
+}
+.multi-select select
+{
+	height: inherit;
+	width: 100%;
+	border-radius: 35px;
+	position: relative;
+}
+
+
+/*next step button style*/
+.next-btn
+{
+	width: 100%;
+	margin-top: 50px;
+	height: 60px;
+}
+.next-btn button
+{
+	width: inherit;
+	height: inherit;
+  background-color: rgb(29, 102, 255);
+  font-size: 17px;
+  font-family: "Jost";
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  border-radius: 35px;
+  /*border: solid 2px transparent;*/
+  border: none;
+  transition: 0.5s all ease;
+  text-align: centers;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+}
+.next-btn button:before
+{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: -100%;
+    background-image: linear-gradient(90deg, transparent, #fff, transparent);
+    transition: 0.5s ease;
+}
+.next-btn button:hover:before
+{
+    left: 100%;
+}
+
+
+/*sidebar style*/
+.sidebar-slider
+{
+	width: 100%;
+	height: 100%;
+	background-color: rgb(255, 255, 255);
+	border-radius: 90px;
+	position: relative;
+	padding: 50px;
+	margin: 0 20px;
+	z-index: 0;
+
+}
+.bg-shape
+{
+	position: absolute;
+	top: 50px;
+	left: 0;
+	width: 80%;
+	right: 0;
+	z-index: -1;
+	margin-left: auto;
+	margin-right: auto;
+}
+.bg-shape img
+{
+	width: 100%;
+}
+
+/*sidebar img style*/
+.sidebar-slider .carousel-caption img
+{
+	width: 100%;
+	margin-top: 40px;
+	margin-bottom: 60px;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+/*sidebar text*/
+.sidebar-slider .carousel-caption span
+{
+
+  font-size: 18px;
+  font-family: "Jost";
+  color: rgb(255, 95, 99);
+  text-transform: capitalize;
+  margin-top: 50px;
+  text-align: center;
+
+}
+
+/*sidebar main heading*/
+.sidebar-slider .carousel-caption .main-heading
+{
+	font-size: 42px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+
+}
+
+/*slider carousel-indicators*/
+.carousel-indicators
+{
+	margin: 0;
+	position: static;
+}
+.carousel-indicators [data-bs-target]
+{
+	border-radius: 50%;
+	height: 20px;
+	transition: 0.3s ease;
+	width: 20px;
+  background-color: rgb(182, 206, 231);
+
+}
+.carousel-indicators .active
+{
+
+  background-color: rgb(19, 61, 236);
+}
+.carousel
+{
+	position: static;
+}
+.carousel-caption
+{
+	position: static;
+}
+
+
+/*step 2*/
+
+.step2
+{
+	padding: 20px;
+	background-color: rgb(255, 255, 255);
+}
+.step2_inner
+{
+	border-radius: 90px;
+  background-color: rgb(243, 247, 254);
+  height: auto;
+}
+.support-form .price-support
+{
+	border-radius: 10px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+.support-form .price-input
+{
+	background: rgb(255, 255, 255);
+	padding: 24px 24px 24px 30px;
+	position: relative;
+}
+.support-form .price-input h3
+{
+
+  font-size: 24px;
+  color: rgb(5, 17, 51);
+  font-weight: bold;
+
+}
+.support-form input[type=radio]
+{
+	-webkit-appearance: none;
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	transition: 0.5s ease;
+  border-radius: 50%;
+  background-color: rgb(235, 241, 251);
+
+}
+.support-form input[type=radio]::after
+{
+	transition: 0.5s ease;
+}
+.support-form input[type=radio]:checked::after
+{
+	content: "";
+  background-color: rgb(146, 219, 104);
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 25% !important;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50%;
+
+}
+.perk-list
+{
+	margin-top: 3px;
+	background-color: rgb(255,255,255);
+	padding: 15px 30px;
+	font-family: "Roboto";
+}
+.perk-list ul
+{
+	list-style: none;
+	padding: 0;
+}
+.perk-list ul li
+{
+	margin-top: 10px;
+  font-size: 16px;
+}
+.perk-list ul li::before
+{
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+  color: rgb(72, 203, 48);
+	content: "\f058";
+	margin-right: 10px;
+}
+.support-form span
+{
+
+  font-size: 20px;
+  font-family: "Jost";
+  color: rgb(47, 49, 70);
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+
+}
+.support-form .head
+{
+
+  font-size: 22px;
+  color: rgb(47, 49, 70);
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.support-form .text
+{
+
+  font-size: 16px;
+  color: rgb(129, 129, 129);
+  margin-bottom: 0;
+}
+.support-plan-duration
+{
+	border-radius: 10px;
+
+}
+.support-plan-duration input[type=radio]
+{
+	position: relative;
+	top: 0;
+	right: 0;
+}
+.support-plan-duration label
+{
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+.support-plan-duration .no-start::after
+{
+	position: relative;
+}
+.support-plan-duration label::after
+{
+
+	position: absolute;
+	content: "";
+	height: 100%;
+	width: 1px;
+	background-color: rgb(235, 241, 251);
+	left: -15px;
+}
+.duration-text
+{
+	margin-left: 10px;
+}
+
+/*thankyou-page*/
+
+.thankyou-page
+{
+  border-radius: 90px;
+  background-color: rgb(243, 247, 254);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+.thankyou-page-inner
+{
+	background: rgb(255,255,255);
+  border-radius: 90px;
+  width: 100%;
+  position: relative;
+  top: 30%;
+  /*transform: translateY(50%);*/
+	text-align: center;
+}
+.tick
+{
+	position: relative;
+}
+.done-tick
+{
+	width: 120px;
+	height: 120px;
+	border: solid 1px transparent;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	border-left-color: rgb(34,208,136);
+  animation: rotate-circle 0.5s linear forwards;
+	border-radius: 50%;
+	background-color: transparent;
+}
+
+
+.tick i
+{
+	font-weight: 900;
+	font-size: 50px;
+	color: rgb(34,208,136);
+  position: absolute;
+  animation: tick-icon 0.8s linear forwards;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+  animation-delay: 0.5s;
+}
+
+.thankyou-page-inner h2
+{
+  font-size: 45px;
+  color: rgb(5, 17, 51);
+  margin-top: 20px;
+  font-weight: bold;
+}
+.thankyou-page-inner p
+{
+
+  font-size: 16px;
+  color: rgb(170, 170, 170);
+  margin-top: 20px;
+}
+
+.thankyou-page-inner .wrapper
+{
+	padding: 80px 290px;
+}
+
+
+
+
+
+#sub img
+{
+    width: 60px;
+}
+
+.highlight
+{
+    border-top: solid 3px var(--primary-color) !important;
+    border-bottom: solid 3px var(--primary-color) !important;
+
+}
+
+
+#error
+{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 20;
+}
+
+
+.invalid
+{
+  border: solid 2px #ff4444 !important;
+  position: relative;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

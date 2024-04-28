@@ -1,0 +1,108 @@
+ /*tick animation*/
+
+ @keyframes rotate-circle
+{
+  25% 
+  {
+
+  		border-left-color: rgb(34,208,136);
+  }
+  50% 
+  {
+
+  		border-left-color: rgb(34,208,136);
+  		border-top-color: rgb(34,208,136);
+  }
+  75% 
+  {
+
+  		border-left-color: rgb(34,208,136);
+  		border-top-color: rgb(34,208,136);
+  		border-right-color: rgb(34,208,136);
+  }
+  100% 
+  {
+  		transform: rotate(360deg);
+  		border-color: rgb(34,208,136);
+  }
+}
+
+@keyframes tick-icon
+{
+  0%
+  {
+    font-size: 0;
+    opacity: 1;
+    top: 50%;
+  }
+  20%
+  {
+    font-size: 10px;
+    top: 45%;
+  }
+  40%
+  {
+    font-size: 20px;
+    top: 40%;
+  }
+  70%
+  {
+    font-size: 200px;
+    top: 0;
+  }
+  100%
+  {
+    font-size: 50px;
+    opacity: 1;
+    top: 30%;
+  }
+}
+
+
+/*input fields animation*/
+.entrance_animation
+{
+    animation: entrance 0.5s linear 1;
+}
+
+@keyframes entrance
+{
+  0%
+  {
+    transform: translateY(-300px) scale(0.5);
+  }
+  70%
+  {
+    transform: translateY(0px) scale(0.5);
+  }
+  100%
+  {
+    transform: scale(1);
+  }
+}
+.animation-delay-25ms
+{
+  animation-delay: 25ms;
+  animation-duration: 1s;
+
+}
+.animation-delay-50ms
+{
+  animation-delay: 50ms;
+  animation-duration: 1.5s;
+}
+.animation-delay-75ms
+{
+  animation-delay: 75ms;
+  animation-duration: 2s;
+}
+.animation-delay-100ms
+{
+  animation-delay: 100ms;
+  animation-duration: 2.5s;
+}
+.animation-delay-125ms
+{
+  animation-delay: 125ms;
+  animation-duration: 3s;
+}
