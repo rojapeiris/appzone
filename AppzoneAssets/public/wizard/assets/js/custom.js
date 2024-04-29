@@ -18,16 +18,6 @@ $(".prev").click(function() {
 
 
 
-$(document).ready(function () {
-    $(window).scroll(function () {
-        $('.form_tabs').toggleClass("form_tabs_fixed", ($(window).scrollTop() > 100));
-     });
-});
-
-
-
-
-
 // disable on enter
 $('form').on('keyup keypress', function(e) {
     var keyCode = e.keyCode || e.which;
@@ -85,33 +75,10 @@ function formvalidate(stepnumber)
         // check from1step1
         $("#from1step1").on('click', function()
         {
-            formvalidate(1);
-
-            var re = /^\w+([-+.'][^\s]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-            var email = $("#mail-email1").val();
-            var emailFormat = re.test(email);
-            
-    
+           console.log("triggered");
             if(inputschecked == false)
             {
-                formvalidate(1);
-            }
-            else if(emailFormat == false)
-            {
-                (function (el) {
-                setTimeout(function () {
-                    el.children().remove('.reveal');
-                }, 3000);
-                }($('#error').append('<div class="reveal alert alert-danger">Email address is invalid!</div>')));
-                if(emailFormat == true)
-                {
-                $("#mail-email1").removeClass('invalid');
-                }
-                else
-                {
-                $("#mail-email1").addClass('invalid');
-                }
-    
+              next();
             }
             else
             {
@@ -119,42 +86,7 @@ function formvalidate(stepnumber)
             }
         })
 
-        // check form2 step1
-        $("#form2step1").on('click', function()
-        {
-            formvalidate(2);
-            
-            var re = /^\w+([-+.'][^\s]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/;
-            var email = $("#mail-email2").val();
-            var emailFormat = re.test(email);
-    
-            if(inputschecked == false)
-            {
-                formvalidate(2);
-            }
-            else if(emailFormat == false)
-            {
-                (function (el) {
-                setTimeout(function () {
-                    el.children().remove('.reveal');
-                }, 3000);
-                }($('#error').append('<div class="reveal alert alert-danger">Email address is invalid!</div>')));
-                if(emailFormat == true)
-                {
-                $("#mail-email2").removeClass('invalid');
-                }
-                else
-                {
-                $("#mail-email2").addClass('invalid');
-                }
-    
-            }
-            else
-            {
-                next();
-            }
-        })
-
+      
         // check last step
        $("#sub").on('click' , function()
        {
